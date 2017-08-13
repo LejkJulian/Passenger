@@ -2266,6 +2266,13 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Passenger.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.2"
+        }
       }
     }
   },
@@ -7029,11 +7036,17 @@
         "system.xml.xpath.xdocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Passenger.Core/1.0.0": {
+      "type": "project",
+      "path": "../Passenger-Core/Passenger-Core.csproj",
+      "msbuildProject": "../Passenger-Core/Passenger-Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
-      "Microsoft.NETCore.App >= 1.1.2"
+      "Microsoft.NETCore.App >= 1.1.2",
+      "Passenger.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7042,17 +7055,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passenger-Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passenger-Infrastructure.csproj",
       "projectName": "Passenger-Infrastructure",
-      "projectPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passenger-Infrastructure.csproj",
-      "outputPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passenger-Infrastructure.csproj",
+      "outputPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "frameworks": {
         "netcoreapp1.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Core\\Passenger-Core.csproj": {
+              "projectPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Core\\Passenger-Core.csproj"
+            }
+          }
         }
       }
     },

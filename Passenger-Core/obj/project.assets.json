@@ -7042,10 +7042,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Core\\Passenger-Core.csproj",
+      "projectUniqueName": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Core\\Passenger-Core.csproj",
       "projectName": "Passenger-Core",
-      "projectPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Core\\Passenger-Core.csproj",
-      "outputPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Core\\obj\\",
+      "projectPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Core\\Passenger-Core.csproj",
+      "outputPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Core\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
