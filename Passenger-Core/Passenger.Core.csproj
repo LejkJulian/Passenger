@@ -5,4 +5,8 @@
     <PackageId>Passenger.Core</PackageId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Extended class\" />
+  </ItemGroup>
+
 </Project>

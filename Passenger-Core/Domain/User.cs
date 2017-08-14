@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -19,15 +20,70 @@ namespace Passenger.Core.Domain
         {
 
         }
-        public User(string email,string username, string pasword, string salt)
+        public User(string email,string username, string password, string salt)
         {//zrobic walidacje danych
             ID = Guid.NewGuid();
+            EmailValidation(email);
             Email = email.ToLowerInvariant();
+            IsNullOrWhiteSpaceOrEmpty(username);
             UserName = username;
-            Password = pasword;
+            PasswordValidation(password);
+            Password = password;
             Salt = salt;
             CreatedAt = DateTime.UtcNow;
 
+        }
+
+        public  string IsNullOrWhiteSpaceOrEmpty( string word)
+        {
+            if (string.IsNullOrWhiteSpace(word))
+            {
+                throw new Exception($"{word}is null or have white space");
+            }
+            if (string.IsNullOrEmpty(word))
+            {
+                throw new Exception($"{word}is null or empty");
+            }
+            return word;
+        }
+        public  string EmailValidation( string email)
+        {
+
+            if (email == null)
+                throw new ArgumentNullException($" Email is null.");
+            if (!email.Contains("@"))
+                throw new FormatException($"Email is wrong, must contain @");
+            return email;
+        }
+        public bool PasswordValidation(string password)
+        {
+            const int MIN_LENGTH = 4;
+            const int MAX_LENGTH = 15;
+
+            if (password == null) throw new ArgumentNullException();
+
+            bool meetsLengthRequirements = password.Length >= MIN_LENGTH && password.Length <= MAX_LENGTH;
+            bool hasUpperCaseLetter = false;
+            bool hasLowerCaseLetter = false;
+            bool hasDecimalDigit = false;
+
+
+            if (meetsLengthRequirements)
+            {
+                foreach (char c in password)
+                {
+                    if (char.IsUpper(c)) hasUpperCaseLetter = true;
+                    else if (char.IsLower(c)) hasLowerCaseLetter = true;
+                    else if (char.IsDigit(c)) hasDecimalDigit = true;
+                }
+            }
+
+            bool isValid = meetsLengthRequirements
+                        && hasUpperCaseLetter
+                        && hasLowerCaseLetter
+                        && hasDecimalDigit
+                        ;
+            return isValid;
         }
     }
 }
