@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Passenger.Infrastructure.Services;
+using Passenger.Core.Repositories;
+using Passenger.Infrastructure.Repository;
 
 namespace Passenger
 {
@@ -28,6 +31,9 @@ namespace Passenger
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            //Konfigurujemy IoC wstrzykiwanie interfejsów do klas
+            services.AddScoped<IUserService,UserServices>();
+            services.AddScoped<IUserRepository, InMemoryUserRepository>();
             services.AddMvc();
         }
 

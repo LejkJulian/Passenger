@@ -8646,10 +8646,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Tests-EndToEnd\\Passenger-Tests-EndToEnd.csproj",
-      "projectName": "Passenger-Tests-EndToEnd",
-      "projectPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Tests-EndToEnd\\Passenger-Tests-EndToEnd.csproj",
-      "outputPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Tests-EndToEnd\\obj\\",
+      "projectUniqueName": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Tests-EndToEnd\\Passenger.Tests.EndToEnd.csproj",
+      "projectName": "Passenger.Tests.EndToEnd",
+      "projectPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Tests-EndToEnd\\Passenger.Tests.EndToEnd.csproj",
+      "outputPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Tests-EndToEnd\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

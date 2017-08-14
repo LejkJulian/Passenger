@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger-Api", "Passenger\Passenger-Api.csproj", "{32B2E199-6AAA-45EE-8B92-92457CEBAF94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger.Api", "Passenger\Passenger.Api.csproj", "{32B2E199-6AAA-45EE-8B92-92457CEBAF94}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger-Infrastructure", "Passenger-Infrastructure\Passenger-Infrastructure.csproj", "{F3909F4A-0944-40A7-816E-12317CD540E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger.Infrastructure", "Passenger-Infrastructure\Passenger.Infrastructure.csproj", "{F3909F4A-0944-40A7-816E-12317CD540E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger-Core", "Passenger-Core\Passenger-Core.csproj", "{81B686F2-5405-486F-B5B0-EEDFD03C5147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger.Core", "Passenger-Core\Passenger.Core.csproj", "{81B686F2-5405-486F-B5B0-EEDFD03C5147}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Passenger-Tests", "Passenger-Tests\Passenger-Tests.csproj", "{C28F3400-7B5F-479B-A26B-E4AA2973CF60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger.Tests", "Passenger-Tests\Passenger.Tests.csproj", "{C28F3400-7B5F-479B-A26B-E4AA2973CF60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Passenger-Tests-EndToEnd", "Passenger-Tests-EndToEnd\Passenger-Tests-EndToEnd.csproj", "{9D15FC41-D86A-419D-8222-B14EB66E5CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passenger.Tests.EndToEnd", "Passenger-Tests-EndToEnd\Passenger.Tests.EndToEnd.csproj", "{9D15FC41-D86A-419D-8222-B14EB66E5CB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
