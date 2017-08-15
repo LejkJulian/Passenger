@@ -27,7 +27,7 @@ namespace Passenger.Core.Domain
             Email = email.ToLowerInvariant();
             IsNullOrWhiteSpaceOrEmpty(username);
             UserName = username;
-            PasswordValidation(password);
+            if(PasswordValidation(password))
             Password = password;
             Salt = salt;
             CreatedAt = DateTime.UtcNow;
@@ -60,8 +60,12 @@ namespace Passenger.Core.Domain
             const int MIN_LENGTH = 4;
             const int MAX_LENGTH = 15;
 
-            if (password == null) throw new ArgumentNullException();
+            if (password == null)
+            {
+                throw new ArgumentNullException();
+                
 
+            }
             bool meetsLengthRequirements = password.Length >= MIN_LENGTH && password.Length <= MAX_LENGTH;
             bool hasUpperCaseLetter = false;
             bool hasLowerCaseLetter = false;
