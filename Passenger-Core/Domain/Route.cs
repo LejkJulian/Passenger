@@ -2,12 +2,37 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Passenger.Core.Domain
+namespace Passengers.Core.Domain
 {
     public class Route
     {
-        public Guid RouteID { get;protected set; }
+        public string Name { get; protected set; }
         public Node StartNode { get; protected set; }
         public Node EndNode { get; protected set; }
+        public double Distance { get; protected set; }
+
+        private Route() { }
+        public Route(string name, Node start, Node end, double distance)
+        {
+            Name = Name;
+            StartNode = start;
+            EndNode = end;
+            Distance = distance;
+        }
+       
+        public static Route CreateRoute(string name, Node start, Node end, double distance)
+        => new Route(name, start, end, distance);
+        //private void SetName(string name)
+        //{
+        //    Name = name;
+        //}
+        //private void SetStartNode(Node startNode)
+        //{
+        //    StartNode = startNode;
+        //}
+        //private void SetEndNode(Node endNode)
+        //{
+        //    EndNode = endNode;
+        //}
     }
 }

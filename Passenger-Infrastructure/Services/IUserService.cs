@@ -1,9 +1,9 @@
-﻿using Passenger.Infrastructure.DTO;
+﻿using Passengers.Infrastructure.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Passenger.Infrastructure.Services
+namespace Passengers.Infrastructure.Services
 {
     public interface IUserService
     {

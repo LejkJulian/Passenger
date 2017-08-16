@@ -1,0 +1,7 @@
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Core\bin\Debug\netcoreapp1.1\Passengers.Core.deps.json
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Core\obj\Debug\netcoreapp1.1\Passengers.Core.AssemblyInfo.cs
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Core\bin\Debug\netcoreapp1.1\Passengers.Core.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Core\bin\Debug\netcoreapp1.1\Passengers.Core.pdb
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Core\obj\Debug\netcoreapp1.1\Passengers.Core.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Core\obj\Debug\netcoreapp1.1\Passengers.Core.pdb
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Core\obj\Debug\netcoreapp1.1\Passengers.Core.csprojResolveAssemblyReference.cache

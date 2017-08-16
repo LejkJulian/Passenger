@@ -1,10 +1,10 @@
-﻿using Passenger.Core.Repositories;
+﻿using Passengers.Core.Repositories;
 using System;
 using System.Collections.Generic;
-using Passenger.Core.Domain;
+using Passengers.Core.Domain;
 using System.Linq;
 
-namespace Passenger.Infrastructure.Repository
+namespace Passengers.Infrastructure.Repository
 {
         public  class InMemoryUserRepository : IUserRepository
     {

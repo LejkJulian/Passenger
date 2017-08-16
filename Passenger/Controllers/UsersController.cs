@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Passenger.Infrastructure.Services;
-using Passenger.Infrastructure.DTO;
+using Passengers.Infrastructure.Services;
+using Passengers.Infrastructure.DTO;
 
-namespace Passenger.Controllers
+namespace Passengers.Controllers
 {
     [Route("[controller]")]
     public class UsersController : Controller

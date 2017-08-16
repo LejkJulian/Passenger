@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Passenger-Core\Passenger.Core.csproj" />
-    <ProjectReference Include="..\Passenger-Infrastructure\Passenger.Infrastructure.csproj" />
+    <ProjectReference Include="..\Passenger-Core\Passengers.Core.csproj" />
+    <ProjectReference Include="..\Passenger-Infrastructure\Passengers.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

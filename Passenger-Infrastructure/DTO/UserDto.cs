@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Passenger.Infrastructure.DTO
+namespace Passengers.Infrastructure.DTO
 {
     public class UserDto//anemic class zwracamy do API tylko to co chcemy, nie całosc klasy DDD. Za dużo informacji
     {

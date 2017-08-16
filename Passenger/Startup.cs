@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Passenger.Infrastructure.Services;
-using Passenger.Core.Repositories;
-using Passenger.Infrastructure.Repository;
+using Passengers.Infrastructure.Services;
+using Passengers.Core.Repositories;
+using Passengers.Infrastructure.Repository;
 
-namespace Passenger
+namespace Passengers
 {
     public class Startup
     {

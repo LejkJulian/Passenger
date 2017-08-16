@@ -1,9 +1,9 @@
-﻿using Passenger.Core.Domain;
+﻿using Passengers.Core.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Passenger.Core.Repositories
+namespace Passengers.Core.Repositories
 {
     public interface IUserRepository//dodać repozytoria do drivera 
     {

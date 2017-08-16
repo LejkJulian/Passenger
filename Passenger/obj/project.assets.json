@@ -9664,13 +9664,13 @@
     },
     "Passenger.Core/1.0.0": {
       "type": "project",
-      "path": "../Passenger-Core/Passenger.Core.csproj",
-      "msbuildProject": "../Passenger-Core/Passenger.Core.csproj"
+      "path": "../Passenger-Core/Passengers.Core.csproj",
+      "msbuildProject": "../Passenger-Core/Passengers.Core.csproj"
     },
     "Passenger.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Passenger-Infrastructure/Passenger.Infrastructure.csproj",
-      "msbuildProject": "../Passenger-Infrastructure/Passenger.Infrastructure.csproj"
+      "path": "../Passenger-Infrastructure/Passengers.Infrastructure.csproj",
+      "msbuildProject": "../Passenger-Infrastructure/Passengers.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9689,10 +9689,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger\\Passenger.Api.csproj",
-      "projectName": "Passenger.Api",
-      "projectPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger\\Passenger.Api.csproj",
-      "outputPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger\\obj\\",
+      "projectUniqueName": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger\\Passengers.Api.csproj",
+      "projectName": "Passengers.Api",
+      "projectPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger\\Passengers.Api.csproj",
+      "outputPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -9700,8 +9700,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passenger.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Julian\\documents\\visual studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passenger.Infrastructure.csproj"
+            "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passengers.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Julian\\Documents\\Visual Studio 2017\\Projects\\Passenger\\Passenger-Infrastructure\\Passengers.Infrastructure.csproj"
             }
           }
         }

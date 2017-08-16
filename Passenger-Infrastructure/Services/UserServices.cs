@@ -1,14 +1,14 @@
-﻿using Passenger.Core.Domain;
-using Passenger.Core.Repositories;
+﻿using Passengers.Core.Domain;
+using Passengers.Core.Repositories;
 using System;
-using Passenger.Infrastructure.DTO;
+using Passengers.Infrastructure.DTO;
 
-namespace Passenger.Infrastructure.Services
+namespace Passengers.Infrastructure.Services
 {
         public class UserServices : IUserService
     {
         private readonly IUserRepository _userRepository;
-        public UserServices(IUserRepository userRepository)
+        public UserServices(IUserRepository userRepository)//iuserrepository został dodany jak argument konstruktora
         {
             _userRepository = userRepository;
         }

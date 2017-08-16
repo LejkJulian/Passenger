@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Passenger-Core\Passenger.Core.csproj" />
+    <ProjectReference Include="..\Passenger-Core\Passengers.Core.csproj" />
   </ItemGroup>
 
 </Project>

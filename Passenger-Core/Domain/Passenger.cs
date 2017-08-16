@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Passenger.Core.Domain
+namespace Passengers.Core.Domain
 {
     public class Passenger
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Passenger.Infrastructure
+namespace Passengers.Infrastructure
 {
     class Class1
     {
