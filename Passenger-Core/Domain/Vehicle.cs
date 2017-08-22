@@ -9,8 +9,8 @@ namespace Passengers.Core.Domain
         public string Brand { get; protected set; }
         public string Name { get; protected set; }
         public int Seats { get; protected set; }
-        private Vehicle() { }
-        public Vehicle(string Brand,string Name, int Seats)
+        protected Vehicle() { }
+        protected Vehicle(string Brand,string Name, int Seats)
         {
             SetBrand(Brand);
             SetName(Name);
@@ -29,6 +29,7 @@ namespace Passengers.Core.Domain
         {
             Seats = seats;
         }
+        //zastępuje konstruktor. wzorzec factoryczy builder?
         public static Vehicle Create(string Brand, string Name, int Seats)
             => new Vehicle(Brand, Name, Seats);
     }

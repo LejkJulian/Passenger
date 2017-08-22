@@ -2,40 +2,40 @@
 using Passengers.Core.Repositories;
 using System;
 using Passengers.Infrastructure.DTO;
+using AutoMapper;
+using System.Threading.Tasks;
 
 namespace Passengers.Infrastructure.Services
 {
         public class UserServices : IUserService
     {
         private readonly IUserRepository _userRepository;
-        public UserServices(IUserRepository userRepository)//iuserrepository został dodany jak argument konstruktora
+        private readonly IMapper _mapper;
+        public UserServices(IUserRepository userRepository,IMapper mapper)//iuserrepository został dodany jak argument konstruktora
         {
+            _mapper = mapper;
             _userRepository = userRepository;
         }
 
-        public UserDto Get(string email)
+        public async Task<UserDto> GetAsync(string email)
         {
-            var User = _userRepository.Get(email);
-            return new UserDto
-            {
-                ID = User.ID,
-                Email = User.Email,
-                UserName = User.UserName,
-                LastName = User.LastName,
+            var User =await _userRepository.GetAsync(email);
+            return  _mapper.Map<User, UserDto>(User);
             
-            };
         }
 
-        public void Register(string email,string username,string password)
+        public async Task RegisterAsync(string email,string username,string password)
         {
-            var user = _userRepository.Get(email);
+            var user = await _userRepository.GetAsync(email);
             if(user != null)
             {
                 throw new Exception($"User with email{email} already exist");
             }
-            string salt = Guid.NewGuid().ToString("N");
+            string salt =  Guid.NewGuid().ToString("N");
             user = new User(email,username,password,salt);
-            _userRepository.Add(user);
+               await  _userRepository.AddAsync(user);
         }
+        
+        
     }
 }

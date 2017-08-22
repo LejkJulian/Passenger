@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Passengers.Infrastructure.Services;
 using Passengers.Core.Repositories;
 using Passengers.Infrastructure.Repository;
+using Passengers.Infrastructure.Mappers;
 
 namespace Passengers
 {
@@ -34,6 +35,7 @@ namespace Passengers
             //Konfigurujemy IoC wstrzykiwanie interfejsów do klas
             services.AddScoped<IUserService,UserServices>();
             services.AddScoped<IUserRepository, InMemoryUserRepository>();
+            services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddMvc();
         }
 

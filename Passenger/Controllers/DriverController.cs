@@ -20,7 +20,9 @@ namespace Passengers.Controllers
         [HttpGet("{id}")]
         public DriverDto Get(Guid id)
         => _driverService.Get(id);
+        // GET api/id
+      
 
-       
+
     }
 }

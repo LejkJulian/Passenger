@@ -7,7 +7,7 @@ namespace Passengers.Core.Repositories
 {
     public interface IDriverRepository
     {
-        
+
         Driver GetID(Guid UserID);
         IEnumerable<Driver> GetAll();
         void Add(Driver driver);

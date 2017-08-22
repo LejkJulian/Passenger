@@ -2,16 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Passengers.Core.Repositories
 {
     public interface IUserRepository//dodać repozytoria do drivera 
     {
-        User Get(string email);
-        User Get( Guid ID);
-        IEnumerable<User> GetAll();
-        void Add(User user);
-        void Update(User user);
-        void Remove(Guid ID);
+        Task<User> GetAsync(string email);
+        Task<User> GetAsync( Guid ID);
+        Task<IEnumerable<User>> GetAllAsync();
+        Task AddAsync(User user);
+        Task UpdateAsync(User user);
+        Task RemoveAsync(Guid ID);
     }
 }

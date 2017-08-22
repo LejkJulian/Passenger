@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-   <PackageId>Passenger.Tests.EndToEnd</PackageId>
+   <PackageId>Passengers.Tests.EndToEnd</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

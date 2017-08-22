@@ -15,6 +15,7 @@ namespace Passengers.Core.Domain
         public string Salt { get; protected set; }
         public string Name { get; protected set; }      
         public DateTime CreatedAt { get; protected set; }
+        public object Id { get; set; }
 
         protected User()
         {
@@ -23,11 +24,11 @@ namespace Passengers.Core.Domain
         public User(string email,string username, string password, string salt)
         {//zrobic walidacje danych
             ID = Guid.NewGuid();
-            EmailValidation(email);
+            //EmailValidation(email);
             Email = email.ToLowerInvariant();
-            IsNullOrWhiteSpaceOrEmpty(username);
+            //IsNullOrWhiteSpaceOrEmpty(username);
             UserName = username;
-            if(PasswordValidation(password))
+            //if(PasswordValidation(password))
             Password = password;
             Salt = salt;
             CreatedAt = DateTime.UtcNow;

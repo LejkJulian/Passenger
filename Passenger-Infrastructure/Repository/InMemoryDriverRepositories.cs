@@ -10,18 +10,18 @@ namespace Passengers.Infrastructure.Repository
     class InMemoryDriverRepositories : IDriverRepository
     {
         private ISet<Driver> _drivers = new HashSet<Driver>();
-        
+
         public void Add(Driver driver)
         {
             _drivers.Add(driver);
         }
 
         public IEnumerable<Driver> GetAll()
-            =>_drivers;
+            => _drivers;
 
         public Driver GetID(Guid UserID)
         {
-           return _drivers.SingleOrDefault(x => x.UserID == UserID);
+            return _drivers.SingleOrDefault(x => x.UserID == UserID);
         }
 
         public void Remove(Driver driver)
@@ -31,7 +31,8 @@ namespace Passengers.Infrastructure.Repository
 
         public void Update(Driver driver)
         {
-           
+
         }
     }
 }
+
