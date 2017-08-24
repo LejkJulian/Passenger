@@ -34,7 +34,7 @@ namespace Passengers
             // Add framework services.
             //Konfigurujemy IoC wstrzykiwanie interfejsów do klas
             services.AddScoped<IUserService,UserServices>();
-            services.AddScoped<IUserRepository, InMemoryUserRepository>();
+            services.AddSingleton<IUserRepository, InMemoryUserRepository>();/////////
             services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddMvc();
         }

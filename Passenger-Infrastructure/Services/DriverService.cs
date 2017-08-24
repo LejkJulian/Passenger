@@ -5,6 +5,7 @@ using Passengers.Infrastructure.DTO;
 using Passengers.Core.Repositories;
 using AutoMapper;
 using Passengers.Core.Domain;
+using System.Threading.Tasks;
 
 namespace Passengers.Infrastructure.Services
 {
@@ -17,9 +18,9 @@ namespace Passengers.Infrastructure.Services
             _driverRepository = driverRepository;
             _mapper = mapper;
         }
-        public DriverDto Get(Guid userID)
+        public async Task<DriverDto> GetAsync(Guid userID)
         {
-            var driver = _driverRepository.GetID(userID);
+            var driver =await  _driverRepository.GetIDAsync(userID);
             return _mapper.Map<Driver,DriverDto>(driver);
         }
         //return new DriverDto
@@ -32,9 +33,9 @@ namespace Passengers.Infrastructure.Services
 
         //};
 
-        public void SetVehicle(Guid userID, string brand, string name)
+        public async Task SetVehicleAsync(Guid userID, string brand, string name)
         {
-
+            await Task.CompletedTask;
         }
     }
 }

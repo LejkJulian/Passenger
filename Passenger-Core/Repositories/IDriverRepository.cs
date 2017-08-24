@@ -2,17 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Passengers.Core.Repositories
 {
     public interface IDriverRepository
     {
 
-        Driver GetID(Guid UserID);
-        IEnumerable<Driver> GetAll();
-        void Add(Driver driver);
-        void Update(Driver driver);
-        void Remove(Driver driver);
+        Task<Driver> GetIDAsync(Guid UserID);
+        Task<IEnumerable<Driver>> GetAllAsync();
+        Task AddAsync(Driver driver);
+        Task UpdateAsync(Driver driver);
+        Task RemoveAsync(Driver driver);
 
         //chyba nie wiem jak on działa
         //Driver GetUserID(Guid UserID);

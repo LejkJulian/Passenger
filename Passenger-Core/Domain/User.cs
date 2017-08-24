@@ -24,11 +24,12 @@ namespace Passengers.Core.Domain
         public User(string email,string username, string password, string salt)
         {//zrobic walidacje danych
             ID = Guid.NewGuid();
-            //EmailValidation(email);
-            Email = email.ToLowerInvariant();
-            //IsNullOrWhiteSpaceOrEmpty(username);
+           // EmailValidation(email);
+            Email = email;
+          //  IsNullOrWhiteSpaceOrEmpty(username);
             UserName = username;
-            //if(PasswordValidation(password))
+           // if (!PasswordValidation(password))
+              //  throw new Exception("Password is invalid.");
             Password = password;
             Salt = salt;
             CreatedAt = DateTime.UtcNow;
