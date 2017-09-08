@@ -10,7 +10,7 @@ namespace Passengers.Infrastructure.Repository
 {
     class InMemoryDriverRepositories : IDriverRepository
     {
-        private  ISet<Driver> _drivers = new HashSet<Driver>();
+        private ISet<Driver> _drivers = new HashSet<Driver>();
 
         public async Task AddAsync(Driver driver)
         {
@@ -22,9 +22,9 @@ namespace Passengers.Infrastructure.Repository
 
             => await Task.FromResult(_drivers);
 
-        public async Task<Driver> GetIDAsync(Guid UserID)
+        public async Task<Driver> GetNameAsync(string userName)
         {
-            return await Task.FromResult( _drivers.SingleOrDefault(x => x.UserID == UserID));
+            return await Task.FromResult( _drivers.SingleOrDefault(x => x.DriverName == userName));
            
         }
 

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 
 namespace Passengers.Core.Domain
 {
     public class Driver
     {
         
-        public Guid UserID { get; protected set; }
+        public Guid DriverID { get; protected set; }
         public string DriverName { get;protected set; }
         public Vehicle Vehicle { get; protected set; }
         public DateTime UpdateAt { get; protected set; }
@@ -31,10 +31,10 @@ namespace Passengers.Core.Domain
           }
         }
         protected Driver() { }
-        public Driver(Guid id,string Name)
+        public Driver(User user)
         {
-            DriverName = Name;
-            UserID = id;
+            DriverName = user.Name;
+            DriverID = user.ID;
         }
         public void AddVehicle(Vehicle vehicle)
         {
@@ -61,6 +61,7 @@ namespace Passengers.Core.Domain
             _routes.Remove(route);
             UpdateAt = DateTime.UtcNow;
         }
+        
          
     }
 }

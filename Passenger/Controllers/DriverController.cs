@@ -18,8 +18,8 @@ namespace Passengers.Controllers
         }
         // GET api/id
         [HttpGet("{id}")]
-        public async Task<DriverDto> GetAsync(Guid id)
-        => await _driverService.GetAsync(id);
+        public async Task<DriverDto> GetAsync(string userName)
+        => await _driverService.GetAsync(userName);
         // GET api/id
       
 

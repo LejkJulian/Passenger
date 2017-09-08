@@ -8,7 +8,7 @@ namespace Passengers.Infrastructure.Services
 {
     public interface IDriverService
     {
-        Task<DriverDto> GetAsync(Guid userID);
+        Task<DriverDto> GetAsync(string DriverName);
         Task SetVehicleAsync(Guid userID, string brand, string name);
 
         //Task<DriverDetailsDto> GetAsync(Guid userId);

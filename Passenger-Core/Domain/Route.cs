@@ -14,25 +14,26 @@ namespace Passengers.Core.Domain
         private Route() { }
         public Route(string name, Node start, Node end, double distance)
         {
-            Name = Name;
-            StartNode = start;
-            EndNode = end;
-            Distance = distance;
+            SetEndNode(end);
+            SetStartNode(start);
+            SetName(name);
+            //distance = odległosc miedzy end and start;
         }
        
         public static Route CreateRoute(string name, Node start, Node end, double distance)
         => new Route(name, start, end, distance);
-        //private void SetName(string name)
-        //{
-        //    Name = name;
-        //}
-        //private void SetStartNode(Node startNode)
-        //{
-        //    StartNode = startNode;
-        //}
-        //private void SetEndNode(Node endNode)
-        //{
-        //    EndNode = endNode;
-        //}
+        private void SetName(string name)
+        {
+
+            Name = name;
+        }
+        private void SetStartNode(Node startNode)
+        {
+            StartNode = startNode;
+        }
+        private void SetEndNode(Node endNode)
+        {
+            EndNode = endNode;
+        }
     }
 }

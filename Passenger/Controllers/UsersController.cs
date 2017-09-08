@@ -19,13 +19,20 @@ namespace Passengers.Controllers
         }
         // GET api/email
         [HttpGet("{email}")]
-        public async Task <UserDto> GetAsync(string email)
-        => await _userService.GetAsync(email);
+        public async Task <IActionResult> GetAsync(string email)
+        {
+            var user = await _userService.GetAsync(email);
+            if(user==null)
+            { return NotFound(); }
+            return Json(user);
+        }
+        
         
        [HttpPost("")]
-       public async Task Post([FromBody]CreateUser user)
+       public async Task<IActionResult> Post([FromBody]CreateUser user)
         {
            await  _userService.RegisterAsync(user.Email, user.UserName, user.Password);
+            return Created($"/users/{user.Email}",user.UserName);
         }
     }
 }

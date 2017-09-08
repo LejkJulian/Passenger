@@ -24,12 +24,12 @@ namespace Passengers.Core.Domain
         public User(string email,string username, string password, string salt)
         {//zrobic walidacje danych
             ID = Guid.NewGuid();
-           // EmailValidation(email);
+            EmailValidation(email);
             Email = email;
-          //  IsNullOrWhiteSpaceOrEmpty(username);
+            IsNullOrWhiteSpaceOrEmpty(username);
             UserName = username;
-           // if (!PasswordValidation(password))
-              //  throw new Exception("Password is invalid.");
+          //  if (!PasswordValidation(password))
+          //      throw new Exception("Password is invalid.");
             Password = password;
             Salt = salt;
             CreatedAt = DateTime.UtcNow;
@@ -48,7 +48,7 @@ namespace Passengers.Core.Domain
             }
             return word;
         }
-        public  string EmailValidation( string email)
+        public string EmailValidation(string email)
         {
 
             if (email == null)
@@ -65,7 +65,7 @@ namespace Passengers.Core.Domain
             if (password == null)
             {
                 throw new ArgumentNullException();
-                
+
 
             }
             bool meetsLengthRequirements = password.Length >= MIN_LENGTH && password.Length <= MAX_LENGTH;
