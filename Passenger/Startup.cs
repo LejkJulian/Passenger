@@ -7,6 +7,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+<<<<<<< HEAD
+=======
+using Passengers.Infrastructure.Services;
+using Passengers.Core.Repositories;
+using Passengers.Infrastructure.Repository;
+using Passengers.Infrastructure.Mappers;
+>>>>>>> parent of 5ef44fa... Command handler i dispatcher
 
 namespace Passenger
 {
@@ -28,6 +35,13 @@ namespace Passenger
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+<<<<<<< HEAD
+=======
+            //Konfigurujemy IoC wstrzykiwanie interfejsów do klas
+            services.AddScoped<IUserService,UserServices>();
+            services.AddSingleton<IUserRepository, InMemoryUserRepository>();/////////
+            services.AddSingleton(AutoMapperConfig.Initialize());
+>>>>>>> parent of 5ef44fa... Command handler i dispatcher
             services.AddMvc();
         }
 

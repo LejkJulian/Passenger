@@ -1,0 +1,12 @@
+diff a/Passenger-Core/Domain/DailyRoute.cs b/Passenger-Core/Domain/DailyRoute.cs	(rejected hunks)
+@@ -10,6 +10,10 @@
+         private ISet<PassengerNode> _passengerNodes = new HashSet<PassengerNode>();
+         public Guid ID { get; protected set; }
+         public Route Route { get; protected set; }
++        protected DailyRoute()
++        {
++            ID= new Guid();
++        }
+         public IEnumerable<PassengerNode> PassengerNodes
+         {
+             get { return _passengerNodes; }

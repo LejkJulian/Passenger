@@ -8,6 +8,10 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:Passenger/Passenger-Api.csproj
+=======
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
+>>>>>>> parent of 5ef44fa... Command handler i dispatcher:Passenger/Passengers.Api.csproj
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
