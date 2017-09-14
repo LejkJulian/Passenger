@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Passengers.Infrastructure.Services
 {
-    class DriverService : IDriverService
+   public class DriverService : IDriverService
     {
         private readonly IDriverRepository _driverRepository;
         private readonly IMapper _mapper;

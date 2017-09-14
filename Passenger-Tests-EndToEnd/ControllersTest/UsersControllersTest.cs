@@ -14,17 +14,9 @@ using Xunit;
 
 namespace Passengers.Tests.EndToEnd.ControllersTest
 {
-   public  class UsersControllersTest
+   public  class UsersControllersTest :ControllerTestBase
     {
-        private readonly TestServer _server;
-        private readonly HttpClient _client;
-        public UsersControllersTest()
-        {
-            // Arrange
-            _server = new TestServer(new WebHostBuilder()//utworzenie Api  w pamięci
-                .UseStartup<Startup>());
-            _client = _server.CreateClient();
-        }
+        
         [Fact]
         public async Task given_valid_email_user_should_exist()
         {
@@ -59,7 +51,7 @@ namespace Passengers.Tests.EndToEnd.ControllersTest
             var payload = GetPayLoad(request);
             var response = await _client.PostAsync("users",payload);
             response.StatusCode.ShouldBeEquivalentTo(HttpStatusCode.Created);
-            response.Headers.Location.ToString().ShouldBeEquivalentTo($"/users/{request.Email}");
+            response.Headers.Location.ToString().ShouldBeEquivalentTo($"users/{request.Email}");
             var user = await GetUserAsync(request.Email);
 
             // Assert
@@ -72,11 +64,6 @@ namespace Passengers.Tests.EndToEnd.ControllersTest
             var responseString = await response.Content.ReadAsStringAsync();
             return  JsonConvert.DeserializeObject<UserDto>(responseString);
         }
-        private static StringContent GetPayLoad(object data)
-        {
-            //konwersja data do json
-            var json = JsonConvert.SerializeObject(data);
-            return new StringContent(json, Encoding.UTF8,"application/json");
-        }
+       
     }
 }

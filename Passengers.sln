@@ -13,6 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passengers.Tests", "Passeng
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Passengers.Tests.EndToEnd", "Passenger-Tests-EndToEnd\Passengers.Tests.EndToEnd.csproj", "{9D15FC41-D86A-419D-8222-B14EB66E5CB4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{03F7ECC0-0C2B-4A48-BE99-EC0E4087ADC9}"
+	ProjectSection(SolutionItems) = preProject
+		database.sql = database.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

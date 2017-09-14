@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "0f5bf1943438eca8f649227d0204dc7f27ed775a"
+    "signature": "49168425b574eb866b1cc9ba7cb07f0625efa02d"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "passengers.tests.endtoend/1.0.0": {
         "dependencies": {
+          "Autofac": "4.5.0",
           "FluentAssertions": "4.19.3",
           "Microsoft.AspNetCore.TestHost": "1.1.2",
           "Microsoft.NET.Test.Sdk": "15.5.0-preview-20170810-02",
@@ -19,6 +20,20 @@
         },
         "runtime": {
           "Passengers.Tests.EndToEnd.dll": {}
+        }
+      },
+      "autofac/4.5.0": {
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "autofac.extensions.dependencyinjection/4.0.0": {
+        "dependencies": {
+          "Autofac": "4.5.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "automapper/6.1.1": {
@@ -488,6 +503,26 @@
       "microsoft.dotnet.platformabstractions/1.1.2": {
         "runtime": {
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
+      "microsoft.entityframeworkcore/1.1.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "1.1.2",
+          "Microsoft.Extensions.DependencyInjection": "1.1.1",
+          "Microsoft.Extensions.Logging": "1.1.2",
+          "Remotion.Linq": "2.1.1",
+          "System.Interactive.Async": "3.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "microsoft.entityframeworkcore.inmemory/1.1.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "1.1.2"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.InMemory.dll": {}
         }
       },
       "microsoft.extensions.caching.abstractions/1.1.2": {
@@ -974,6 +1009,11 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
+      "remotion.linq/2.1.1": {
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
+        }
+      },
       "system.collections.nongeneric/4.3.0": {
         "runtime": {
           "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
@@ -1035,6 +1075,11 @@
             "rid": "win",
             "assetType": "runtime"
           }
+        }
+      },
+      "system.interactive.async/3.0.0": {
+        "runtime": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
         }
       },
       "system.net.websockets/4.3.0": {
@@ -1152,9 +1197,12 @@
       "passenger.api/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.1.1",
+          "Autofac": "4.5.0",
+          "Autofac.Extensions.DependencyInjection": "4.0.0",
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.2",
           "Microsoft.AspNetCore.Mvc": "1.1.3",
+          "Microsoft.EntityFrameworkCore.InMemory": "1.1.2",
           "Microsoft.Extensions.Logging.Debug": "1.1.2",
           "Passenger.Infrastructure": "1.0.0"
         },
@@ -1170,6 +1218,9 @@
       "passenger.infrastructure/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.1.1",
+          "Autofac": "4.5.0",
+          "Microsoft.EntityFrameworkCore": "1.1.2",
+          "Microsoft.EntityFrameworkCore.InMemory": "1.1.2",
           "Newtonsoft.Json": "10.0.3",
           "Passenger.Core": "1.0.0"
         },
@@ -1184,6 +1235,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "autofac/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5gf8q7r5UR4tpds5Ml4d5+vzVPQtSa/VxI7pc0MqLhI69mhvnmTpPfgBRDsaMryii9iVQUqSsMAz+y4R8oBjXw==",
+      "path": "autofac/4.5.0",
+      "hashPath": "autofac.4.5.0.nupkg.sha512"
+    },
+    "autofac.extensions.dependencyinjection/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UQP+CkHs6wfjWhisuhSFoG8CNrG8fmYOclFwx/aYNc+He1Qoi8s9UDTSzcPncJ2JOtmZmFRWSLT0jhtT6KmYJg==",
+      "path": "autofac.extensions.dependencyinjection/4.0.0",
+      "hashPath": "autofac.extensions.dependencyinjection.4.0.0.nupkg.sha512"
     },
     "automapper/6.1.1": {
       "type": "package",
@@ -1507,6 +1572,20 @@
       "path": "microsoft.dotnet.platformabstractions/1.1.2",
       "hashPath": "microsoft.dotnet.platformabstractions.1.1.2.nupkg.sha512"
     },
+    "microsoft.entityframeworkcore/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ef7qkP6Fh1sH9Kah+BAzypHtF/Sj9ZuqmEZy/OHukjjoJLJIaiwOBOAXjHs0qO/6eOMF6hALyBtv/sVbVogVkQ==",
+      "path": "microsoft.entityframeworkcore/1.1.2",
+      "hashPath": "microsoft.entityframeworkcore.1.1.2.nupkg.sha512"
+    },
+    "microsoft.entityframeworkcore.inmemory/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p/MB8Yh5Y+oVboCb3hQF2JyAzMJi+O8hNFktE4nv4CAq1/1Ee0kjqpvA/buvMMGm6PUUufC+ZKoz8A+PKL7RMA==",
+      "path": "microsoft.entityframeworkcore.inmemory/1.1.2",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.1.1.2.nupkg.sha512"
+    },
     "microsoft.extensions.caching.abstractions/1.1.2": {
       "type": "package",
       "serviceable": true,
@@ -1745,6 +1824,13 @@
       "path": "newtonsoft.json/10.0.3",
       "hashPath": "newtonsoft.json.10.0.3.nupkg.sha512"
     },
+    "remotion.linq/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Md1EawqMuBzc0y8X1T+i3ft8Utt+9QEWLa/5kVWPM/nIaKMoL8liNKYQZl+bO3GYKQbBEX4MphhFwqtY5lEAqg==",
+      "path": "remotion.linq/2.1.1",
+      "hashPath": "remotion.linq.2.1.1.nupkg.sha512"
+    },
     "system.collections.nongeneric/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1807,6 +1893,13 @@
       "sha512": "sha512-VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
       "path": "system.diagnostics.tracesource/4.3.0",
       "hashPath": "system.diagnostics.tracesource.4.3.0.nupkg.sha512"
+    },
+    "system.interactive.async/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gvpapn8KVSL7wzjCAeKB3Z7I6NMyixkC2Cu7xBohAoHF8Sz66j7wrKm6+wauAX56e1Q5txcHMPG+MN7iMuSYJw==",
+      "path": "system.interactive.async/3.0.0",
+      "hashPath": "system.interactive.async.3.0.0.nupkg.sha512"
     },
     "system.net.websockets/4.3.0": {
       "type": "package",

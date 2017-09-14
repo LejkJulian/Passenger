@@ -11,11 +11,21 @@ using Passengers.Infrastructure.Services;
 using Passengers.Core.Repositories;
 using Passengers.Infrastructure.Repository;
 using Passengers.Infrastructure.Mappers;
+using Microsoft.EntityFrameworkCore;
+using Passengers.Infrastructure.EF;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Passengers.Infrastructure.IoC.Modules;
+using Passengers.Infrastructure.Commands.User;
+using Passengers.Infrastructure.Commands;
+using System.Reflection;
 
 namespace Passengers
 {
     public class Startup
     {
+       
+        public IContainer ApplicationContainer { get; private set; }
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -29,23 +39,40 @@ namespace Passengers
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
             //Konfigurujemy IoC wstrzykiwanie interfejsów do klas
             services.AddScoped<IUserService,UserServices>();
-            services.AddSingleton<IUserRepository, InMemoryUserRepository>();/////////
+            services.AddScoped<IUserRepository, InMemoryUserRepository>();/////////
             services.AddSingleton(AutoMapperConfig.Initialize());
+            services.AddEntityFrameworkInMemoryDatabase();
+            services.AddDbContext<PassengerContext>();
+            //dodane prze mnie
+            services.AddScoped<IDriverService, DriverService>();
+            services.AddSingleton<IDriverRepository, InMemoryDriverRepositories>();/////////
             services.AddMvc();
+            /////Autofac
+
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+            builder.RegisterModule<CommandModule>();
+            //builder.RegisterType<CommandDispatcher>()
+            //    .As<ICommandDispatcher>();
+            ApplicationContainer = builder.Build();
+            
+            builder.RegisterType<commandDispatcher>().As<ICommandDispatcher>();
+            return new AutofacServiceProvider(ApplicationContainer);
+    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IApplicationLifetime AppLifeTime)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
             app.UseMvc();
+            AppLifeTime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
         }
     }
 }

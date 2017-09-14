@@ -8,9 +8,13 @@ using System.Threading.Tasks;
 
 namespace Passengers.Infrastructure.Repository
 {
-    class InMemoryDriverRepositories : IDriverRepository
+        public class InMemoryDriverRepositories : IDriverRepository
     {
-        private ISet<Driver> _drivers = new HashSet<Driver>();
+        
+        private ISet<Driver> _drivers = new HashSet<Driver>
+        {
+          
+        };
 
         public async Task AddAsync(Driver driver)
         {

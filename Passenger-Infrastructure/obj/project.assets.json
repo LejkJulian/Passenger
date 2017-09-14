@@ -2,6 +2,19 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "Autofac/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
       "AutoMapper/6.1.1": {
         "type": "package",
         "dependencies": {
@@ -205,6 +218,147 @@
             "assetType": "native",
             "rid": "win8-arm"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
+          "Microsoft.Extensions.Logging": "1.1.1",
+          "NETStandard.Library": "1.6.1",
+          "Remotion.Linq": "2.1.1",
+          "System.Collections.Immutable": "1.3.0",
+          "System.ComponentModel.Annotations": "4.3.0",
+          "System.Interactive.Async": "3.0.0",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "1.1.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.InMemory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.InMemory.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Extensions.Logging.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Primitives": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.Extensions.Options.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
       "Microsoft.NETCore.App/1.1.2": {
@@ -436,6 +590,28 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Remotion.Linq/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.1": {
@@ -1029,6 +1205,25 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "System.Interactive.Async/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -1702,6 +1897,18 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Runtime.Extensions/4.3.0": {
@@ -2427,6 +2634,19 @@
     }
   },
   "libraries": {
+    "Autofac/4.5.0": {
+      "sha512": "5gf8q7r5UR4tpds5Ml4d5+vzVPQtSa/VxI7pc0MqLhI69mhvnmTpPfgBRDsaMryii9iVQUqSsMAz+y4R8oBjXw==",
+      "type": "package",
+      "path": "autofac/4.5.0",
+      "files": [
+        "autofac.4.5.0.nupkg.sha512",
+        "autofac.nuspec",
+        "lib/net45/Autofac.dll",
+        "lib/net45/Autofac.xml",
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.xml"
+      ]
+    },
     "AutoMapper/6.1.1": {
       "sha512": "A+6PAblvzmkXPS20nFBQJvlNSW5oEdyfN5+cxT/Du35fTNyuP5pNDXT64KT/jBgxt7CPduOM0Y7oLnNe0E5IXg==",
       "type": "package",
@@ -2595,6 +2815,122 @@
         "runtimes/win/native/Microsoft.DiaSymReader.Native.arm.dll",
         "runtimes/win/native/Microsoft.DiaSymReader.Native.x86.dll",
         "runtimes/win8-arm/native/Microsoft.DiaSymReader.Native.arm.dll"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore/1.1.2": {
+      "sha512": "ef7qkP6Fh1sH9Kah+BAzypHtF/Sj9ZuqmEZy/OHukjjoJLJIaiwOBOAXjHs0qO/6eOMF6hALyBtv/sVbVogVkQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore/1.1.2",
+      "files": [
+        "lib/net451/Microsoft.EntityFrameworkCore.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.xml",
+        "microsoft.entityframeworkcore.1.1.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/1.1.2": {
+      "sha512": "p/MB8Yh5Y+oVboCb3hQF2JyAzMJi+O8hNFktE4nv4CAq1/1Ee0kjqpvA/buvMMGm6PUUufC+ZKoz8A+PKL7RMA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/1.1.2",
+      "files": [
+        "lib/net451/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.1.1.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Abstractions/1.1.1": {
+      "sha512": "3B0TVNkC6xKptcLFwLp6O1jACRa4hS7g4O03zoEdRYO+vbEigNvKQwA9DOCY5X270QAmUUMdf93qQGBkFrg1bw==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.abstractions/1.1.1",
+      "files": [
+        "lib/netstandard1.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netstandard1.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "microsoft.extensions.caching.abstractions.1.1.1.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Memory/1.1.1": {
+      "sha512": "9gW7V4IkPWZ1p7Q8SJYV1FpraDRATkEYmeR9q5abQ/Z4iel2AaOJsR0fYOoncFDUMVTkjH4cCMKi69LtbvI99g==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.memory/1.1.1",
+      "files": [
+        "lib/net451/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/net451/Microsoft.Extensions.Caching.Memory.xml",
+        "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.xml",
+        "microsoft.extensions.caching.memory.1.1.1.nupkg.sha512",
+        "microsoft.extensions.caching.memory.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/1.1.0": {
+      "sha512": "pGl+h1pokkMhlVGv/CwhJ3dBjCOETMvzlwoi1oLPRQGvS7lil6IWPQqoKgLlvBqBvLMMxuqnBzFMNmhd6OACdg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/1.1.0",
+      "files": [
+        "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.1.1.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "sha512": "O7Ox+gq10Rqj/FO9u3XIvcIdOkmpIoH4DWVEWGAwVDvdHbch+ZcB1N8vvEskKL3VkBHL0pkMiddCN/dZX9OYeQ==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/1.1.0",
+      "files": [
+        "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.1.1.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging/1.1.1": {
+      "sha512": "0nsr3iP5OYEciaLwrVeLc8bTS6yRXYYJH0Oo1TEs5JMkF9gM2wNjUFoWi6LCDdxMlzI+eXJ1yYwNGRU+uXr0QA==",
+      "type": "package",
+      "path": "microsoft.extensions.logging/1.1.1",
+      "files": [
+        "lib/netstandard1.1/Microsoft.Extensions.Logging.dll",
+        "lib/netstandard1.1/Microsoft.Extensions.Logging.xml",
+        "microsoft.extensions.logging.1.1.1.nupkg.sha512",
+        "microsoft.extensions.logging.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/1.1.1": {
+      "sha512": "dKehUsmGgojJdk84LRkUq6Uc+jzjS7Ko/DgrJV2/p0pTA6Yoh8pFcHPQarwnA7TKjRynZY8wRot0pZn70hooug==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/1.1.1",
+      "files": [
+        "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.1.1.1.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options/1.1.1": {
+      "sha512": "Or/vYuw2vovVcKIjxiPv5+MQTDFCqugUfQarN40ygJaCAhHd1wg726tucPA1fQVFPoViKF/FmfiZYwLkO2E1Gg==",
+      "type": "package",
+      "path": "microsoft.extensions.options/1.1.1",
+      "files": [
+        "lib/netstandard1.0/Microsoft.Extensions.Options.dll",
+        "lib/netstandard1.0/Microsoft.Extensions.Options.xml",
+        "microsoft.extensions.options.1.1.1.nupkg.sha512",
+        "microsoft.extensions.options.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/1.1.0": {
+      "sha512": "uZP/fWTDNJwDE+1eHrk7Rqbcjpv+xTrmeeKLmjyOfxpwEjC8hvy369dRo8cDGFYAXy082Oc4qaevqsVbSUp+tg==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/1.1.0",
+      "files": [
+        "lib/netstandard1.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard1.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.1.1.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec"
       ]
     },
     "Microsoft.NETCore.App/1.1.2": {
@@ -2855,6 +3191,25 @@
         "newtonsoft.json.10.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Remotion.Linq/2.1.1": {
+      "sha512": "Md1EawqMuBzc0y8X1T+i3ft8Utt+9QEWLa/5kVWPM/nIaKMoL8liNKYQZl+bO3GYKQbBEX4MphhFwqtY5lEAqg==",
+      "type": "package",
+      "path": "remotion.linq/2.1.1",
+      "files": [
+        "lib/net35/Remotion.Linq.XML",
+        "lib/net35/Remotion.Linq.dll",
+        "lib/net40/Remotion.Linq.XML",
+        "lib/net40/Remotion.Linq.dll",
+        "lib/net45/Remotion.Linq.XML",
+        "lib/net45/Remotion.Linq.dll",
+        "lib/netstandard1.0/Remotion.Linq.dll",
+        "lib/netstandard1.0/Remotion.Linq.xml",
+        "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll",
+        "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml",
+        "remotion.linq.2.1.1.nupkg.sha512",
+        "remotion.linq.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.1": {
@@ -4175,6 +4530,19 @@
         "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll",
         "system.globalization.extensions.4.3.0.nupkg.sha512",
         "system.globalization.extensions.nuspec"
+      ]
+    },
+    "System.Interactive.Async/3.0.0": {
+      "sha512": "gvpapn8KVSL7wzjCAeKB3Z7I6NMyixkC2Cu7xBohAoHF8Sz66j7wrKm6+wauAX56e1Q5txcHMPG+MN7iMuSYJw==",
+      "type": "package",
+      "path": "system.interactive.async/3.0.0",
+      "files": [
+        "lib/net45/System.Interactive.Async.dll",
+        "lib/net45/System.Interactive.Async.xml",
+        "lib/netstandard1.0/System.Interactive.Async.dll",
+        "lib/netstandard1.0/System.Interactive.Async.xml",
+        "system.interactive.async.3.0.0.nupkg.sha512",
+        "system.interactive.async.nuspec"
       ]
     },
     "System.IO/4.3.0": {
@@ -5838,6 +6206,19 @@
         "system.runtime.nuspec"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/4.3.0": {
+      "sha512": "rcnXA1U9W3QUtMSGoyoNHH6w4V5Rxa/EKXmzpORUYlDAlDB34hIQoU57ATXl8xHa83VvzRm6PcElEizgUd7U5w==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.3.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec"
+      ]
+    },
     "System.Runtime.Extensions/4.3.0": {
       "sha512": "guW0uK0fn5fcJJ1tJVXYd7/1h5F+pea1r7FLSOz/f8vPEqbR2ZAknuRDvTQ8PzAilDveOxNjSfr0CHfIQfFk8g==",
       "type": "package",
@@ -7498,6 +7879,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
       "AutoMapper >= 6.1.1",
+      "Autofac >= 4.5.0",
+      "Microsoft.EntityFrameworkCore >= 1.1.2",
+      "Microsoft.EntityFrameworkCore.InMemory >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.2",
       "Newtonsoft.Json >= 10.0.3",
       "Passenger.Core >= 1.0.0"
@@ -7530,6 +7914,14 @@
     "frameworks": {
       "netcoreapp1.1": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "1.1.2"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "1.1.2"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "1.1.2",
@@ -7538,6 +7930,10 @@
           "AutoMapper": {
             "target": "Package",
             "version": "6.1.1"
+          },
+          "Autofac": {
+            "target": "Package",
+            "version": "4.5.0"
           },
           "Newtonsoft.Json": {
             "target": "Package",

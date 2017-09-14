@@ -16,6 +16,7 @@ namespace Passengers.Core.Domain
             SetAddress(addres);
             SetLatitude(latitude);
             SetLongtitude(longtitude);
+            //chyba do wyjebania
         }
         private void SetAddress(string address)
         {
