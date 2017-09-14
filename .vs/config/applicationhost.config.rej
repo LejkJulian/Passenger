@@ -1,0 +1,7 @@
+diff a/.vs/config/applicationhost.config b/.vs/config/applicationhost.config	(rejected hunks)
+@@ -1,4 +0,4 @@
+-﻿<?xml version="1.0" encoding="UTF-8"?>
++<?xml version="1.0" encoding="UTF-8"?>
+ <!--
+ 
+     IIS configuration sections.
