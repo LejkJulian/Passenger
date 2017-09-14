@@ -1,0 +1,16 @@
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Tests.deps.json
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Core.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Infrastructure.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\obj\Debug\netcoreapp1.1\Passenger-Tests.csprojResolveAssemblyReference.cache
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\obj\Debug\netcoreapp1.1\Passenger-Tests.AssemblyInfo.cs
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Tests.runtimeconfig.json
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Tests.runtimeconfig.dev.json
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\NUnit3.TestAdapter.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\nunit.engine.netstandard.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Mono.Cecil.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Tests.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Tests.pdb
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Core.pdb
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\bin\Debug\netcoreapp1.1\Passenger-Infrastructure.pdb
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\obj\Debug\netcoreapp1.1\Passenger-Tests.dll
+C:\Users\Julian\Documents\Visual Studio 2017\Projects\Passenger\Passenger-Tests\obj\Debug\netcoreapp1.1\Passenger-Tests.pdb
