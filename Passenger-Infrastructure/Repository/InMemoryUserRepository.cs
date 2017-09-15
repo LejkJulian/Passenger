@@ -17,8 +17,8 @@ namespace Passengers.Infrastructure.Repository
         //Lista użytkowników
 
         public async Task<User> GetAsync(string email)
-             =>await Task.FromResult( _users.SingleOrDefault(x => x.Email.Equals(email,StringComparison.OrdinalIgnoreCase)));
-        //=>await Task.FromResult(_users.SingleOrDefault(x => x.Email ==email.ToLowerInvariant()));
+        // =>await Task.FromResult( _users.SingleOrDefault(x => x.Email.Equals(email,StringComparison.OrdinalIgnoreCase)));
+        => await Task.FromResult(_users.SingleOrDefault(x => x.Email == email.ToLowerInvariant()));
 
         public async Task<User> GetAsync(Guid Id)
             =>await Task.FromResult( _users.SingleOrDefault(x => x.ID == Id));

@@ -46,7 +46,8 @@ namespace Passengers.Tests.EndToEnd.ControllersTest
             {
                 Email = "test@mail",
                 Password = "secrfsdf",
-                UserName = "maldasd"
+                UserName = "tabaluga"
+                
             };
             var payload = GetPayLoad(request);
             var response = await _client.PostAsync("users",payload);

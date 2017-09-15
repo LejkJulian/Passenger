@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Passengers.Infrastructure.Services;
-using Passengers.Infrastructure.DTO;
 using Passengers.Infrastructure.Commands.User;
 using Passengers.Infrastructure.Commands;
 using Passenger.Api.Controllers;
+using Passengers.Infrastructure.Settings;
 
 namespace Passengers.Controllers
 {
@@ -16,9 +13,10 @@ namespace Passengers.Controllers
     {
         private readonly IUserService _userService;
         
-        public UsersController(IUserService userService, ICommandDispatcher commandDispatcher) :base(commandDispatcher)
+        public UsersController(IUserService userService, ICommandDispatcher commandDispatcher,GeneralSettings settings) :base(commandDispatcher)
         {
             _userService = userService;
+            
             
         }
         // GET api/email

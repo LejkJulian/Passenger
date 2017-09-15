@@ -11,14 +11,14 @@ using Passengers.Infrastructure.Services;
 using Passengers.Core.Repositories;
 using Passengers.Infrastructure.Repository;
 using Passengers.Infrastructure.Mappers;
-using Microsoft.EntityFrameworkCore;
+
 using Passengers.Infrastructure.EF;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Passengers.Infrastructure.IoC.Modules;
 using Passengers.Infrastructure.Commands.User;
 using Passengers.Infrastructure.Commands;
-using System.Reflection;
+
 
 namespace Passengers
 {
@@ -59,6 +59,7 @@ namespace Passengers
             builder.RegisterModule<CommandModule>();
             //builder.RegisterType<CommandDispatcher>()
             //    .As<ICommandDispatcher>();
+            builder.RegisterModule(new SettingsModule(Configuration));
             ApplicationContainer = builder.Build();
             
             builder.RegisterType<commandDispatcher>().As<ICommandDispatcher>();
