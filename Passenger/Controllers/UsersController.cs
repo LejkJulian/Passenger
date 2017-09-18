@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Passengers.Infrastructure.Services;
-using Passengers.Infrastructure.DTO;
 using Passengers.Infrastructure.Commands.User;
+<<<<<<< HEAD
+=======
+using Passengers.Infrastructure.Commands;
+using Passenger.Api.Controllers;
+using Passengers.Infrastructure.Settings;
+>>>>>>> Develop
 
 namespace Passengers.Controllers
 {
@@ -13,9 +15,18 @@ namespace Passengers.Controllers
     public class UsersController : Controller
     {
         private readonly IUserService _userService;
+<<<<<<< HEAD
         public UsersController(IUserService userService)
         {
             _userService = userService;
+=======
+        
+        public UsersController(IUserService userService, ICommandDispatcher commandDispatcher,GeneralSettings settings) :base(commandDispatcher)
+        {
+            _userService = userService;
+            
+            
+>>>>>>> Develop
         }
         // GET api/email
         [HttpGet("{email}")]
