@@ -20,8 +20,4 @@
     <ProjectReference Include="..\Passenger-Core\Passengers.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Commands\Drivers\" />
-  </ItemGroup>
-
 </Project>

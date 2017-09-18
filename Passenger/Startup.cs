@@ -12,13 +12,14 @@ using Passengers.Core.Repositories;
 using Passengers.Infrastructure.Repository;
 using Passengers.Infrastructure.Mappers;
 
+
 using Passengers.Infrastructure.EF;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Passengers.Infrastructure.IoC.Modules;
 using Passengers.Infrastructure.Commands.User;
 using Passengers.Infrastructure.Commands;
-
+using Passengers.Infrastructure.IoC;
 
 namespace Passengers
 {
@@ -45,7 +46,7 @@ namespace Passengers
             //Konfigurujemy IoC wstrzykiwanie interfejsów do klas
             services.AddScoped<IUserService,UserServices>();
             services.AddScoped<IUserRepository, InMemoryUserRepository>();/////////
-            services.AddSingleton(AutoMapperConfig.Initialize());
+            
             services.AddEntityFrameworkInMemoryDatabase();
             services.AddDbContext<PassengerContext>();
             //dodane prze mnie
@@ -59,7 +60,8 @@ namespace Passengers
             builder.RegisterModule<CommandModule>();
             //builder.RegisterType<CommandDispatcher>()
             //    .As<ICommandDispatcher>();
-            builder.RegisterModule(new SettingsModule(Configuration));
+            builder.RegisterModule(new ContainerModule(Configuration));
+            
             ApplicationContainer = builder.Build();
             
             builder.RegisterType<commandDispatcher>().As<ICommandDispatcher>();

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Passengers.Infrastructure.Handlers.Drivers
 {
-    class CreateDriverhandler
+    public class CreateDriverhandler
     {
     }
 }
